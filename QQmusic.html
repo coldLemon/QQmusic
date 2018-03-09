@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <title>L音乐</title>
+    <link rel="stylesheet" type="text/css" href="QQmusic.css">
+    <script type="text/javascript" src="qqmusic.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.js"></script>
+    <script>
+       $(document).ready(function () {
+          /* $(".js_jump").toggle(
+               function arrowslide() {
+                   $("ul.slide__list").animate({left: "0"},1000);},
+               function arrowslide() {
+                   $("ul.slide__list").animate({left: "-100%"}, 1000);}
+           );*/
+           /*小圆点触发的换页事件*/
+           $(function () {
+               function switchslide1() {
+
+                  //var newleft=$("ul.slide__list ").attr("style");
+                  //alert(newleft);
+                   $("ul.slide__list").animate({left:"0"},1000,"swing");
+               }
+
+                   function switchslide2() {
+                       $("ul.slide__list").animate({left: "-100%"},1000,"swing");
+                   //("ul.slide__slist").style=0;
+                   //alert($("ul.slide__list").style);
+               }
+
+               //$(event.target).addCladd("slide_switch__item--current");
+
+               $(".slide_action_btn--left").click(function () {
+                   switchslide1();
+
+               });
+
+
+               $(".slide_action__arrow--right").click(function () {
+                   switchslide2();
+
+               });
+           });
+       });
+
+    </script>
+</head>
+<body class="os_mac">
+<!--顶端S-->
+<div class="header">
+    <div class="section_inner">
+        <h1 class="qqmusic_title">
+            <a href="//y.qq.com">
+                <img src="../picture/logo.png"
+                     class="qqmusic_logo">
+            </a>
+        </h1>
+        <ul class="top_nav" style="float: left">
+            <li class="top_nav_item">
+                <a href="" class="top_nav__link top_nav__link--current" title="音乐馆">音乐馆</a></li>
+            <li class="top_nav_item">
+                <a href="//y.qq.com" class="top_nav__link" title="我的音乐"> 我的音乐</a></li>
+            <li class="top_nav_item">
+                <a href="" class="top_nav__link" title="客户端">客户端</a> </li>
+            <li class="top_nav_item">
+                <a href="" class="top_nav__link" title="音乐号">音乐号</a></li>
+            <li class="top_nav_item">
+                <a href="" class="top_nav__link" title="VIP">VIP</a></li>
+        </ul>
+        <ul class="top_subnav" style="display:">
+            <li class="top_subnav_item">
+                <a href="" class="top_subnav__link top_subnav__current" >首页</a></li>
+            <li class="top_subnav_item">
+                <a href="" class="top_subnav__link">歌手</a></li>
+            <li class="top_subnav_item">
+                <a href="" class="top_subnav__link">专辑</a></li>
+            <li class="top_subnav_item">
+                <a href="" class="top_subnav__link">排行榜</a></li>
+            <li class="top_subnav_item">
+                <a href="" class="top_subnav__link">分类歌单</a></li>
+            <li class="top_subnav_item">
+                <a href="" class="top_subnav__link">电视台</a></li>
+            <li class="top_subnav_item">
+                <a href="" class="top_subnav__link">MV</a></li>
+            <li class="top_subnav_item">
+                <a href="QQmusci_album.html" class="top_subnav__link">数字专辑</a></li>
+        </ul>
+        <!--搜索-->
+        <div class="top_search" role="search">
+            <div class="search_input">
+                <input class="search_input__input" aria-label="请输入搜索内容" type="text"
+                   placeholder="狗子俊 独家记忆" accesskey="s">
+                <button class="search_input_btn">
+                    <i class="icon_search sprite" ></i>
+                    <span class="icon_txt">搜索</span>
+                </button>
+             </div>
+        </div>
+        <div class="header_opt" style="display: block">
+            <span class="mod_top_login">
+                <a class="" href="//y.qq.com/portal" onclick="   " style="display: none"></a>
+                <a class="top_login_link js_login" data-stat="y_new.top.login"
+                   href="javascript:";>登录</a>
+                <a class="mod_btn_top_login_btn_vip">还钱</a>
+            </span>
+        </div>
+    </div>
+
+</div>
+<!--顶部E-->
+<!--热门歌单-->
+<div class="mod_index mod_index--hot mod_slide_box mod_bg" id="taogelist">
+    <div class="section_inner">
+        <div class="index__hd">
+           <h2 class="index__tit">
+               <i class="icon_txt">歌单推荐</i>
+           </h2>
+        </div>
+    <!--切换-->
+      <div class="mod_index_tab" data-stat="y_new.index.playlist">
+        <a href="javascript:;" class="index_tap__item index_tab__item--current
+        js_tag" data-index="0" data-type="recomPlaylist" data-id="1">为你推荐</a>
+        <a href="javascript:;" class="index_tap__item js_tag"
+           data-type="playlist" data-index="0" data-id="67">劲爆</a>
+        <a href="javascript:;" class="index_tap__item js_tag"
+           data-type="playlist" data-index="1" data-id="71">情歌</a>
+        <a href="javascript:;" class="index_tap__item js_tag"
+           data-type="playlist" data-index="2" data-id="3056">网络歌曲</a>
+        <a href="javascript:;" class="index_tap__item js_tag"
+           data-type="playlist" data-index="3" data-id="67">经典</a>
+        <a href="javascript:;" class="index_tap__item js_tag"
+           data-type="playlist" data-index="4" data-id="67">KTV热歌</a>
+    </div>
+       <div class="mod_playlist mod_slide">
+        <ul class="playlist__list slide__list" style="left: -100%;">
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2687124947.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian6.jpg" alt="为什么世界上有这样的CP" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2687124947.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">为什么世界上有这样的CP</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：999999万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/3582377969.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian1.jpg" alt="黄昏总是勾起往事~" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/3582377969.html#stat=y_new.index.playlist.pic"
+                               onclick="setStatCookie&&setStatCookie();">黄昏总是勾起往事~</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：56万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/3586744667.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian9.jpg" alt="酒约黄昏后" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/3586744667.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">酒约黄昏后</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：89万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2063745031.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="https://p.qpic.cn/music_cover/QlZibnBVmII60BjTttickJO9MTQDoTRFvbPicur9d1jJHUA6oYcaE3zLw/300?n=1" alt="朦胧的美啊" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2063745031.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">海域上拯救自己</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：60万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2380264557.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="https://p.qpic.cn/music_cover/DT2VLx1Ln4FaibNjT9hiazW1sRBGDCib9kvZLQZsmpnSclMibHeichPcINg/300?n=1" alt="迷失森林" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2380264557.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">迷失森林</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：80万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+            <div class="playlist__item_box">
+                <div class="playlist__cover mod_cover">
+                    <a href="https://y.qq.com/n/yqq/playlist/2082091835.html#stat=y_new.index.playlist.pic"
+                     onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                        <img src="../picture/tuijian1.jpg" alt="虽然我很丑但是我很酷" class="playlist__pic">
+                        <i class="mod_cover__mask"></i>
+                        <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                    </a>
+                </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2082091835.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">虽然我很丑!但是我很酷</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：33万
+                    </div>
+            </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/3585979472.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian2.jpg" alt="艺术生的恋爱" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/3585979472.html#stat=y_new.index.playlist.pic"
+                               onclick="setStatCookie&&setStatCookie();">艺术生的恋爱</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：99万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2687043182.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian3.jpg" alt="虽然我很丑但是我很酷" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2687043182.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">虽然我很丑!但是我很酷</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：0万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2082091835.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian10.jpg" alt="一个人活的更精彩" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2082091835.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">一个人要活的更精彩</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：96万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2982661453.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian5.jpg" alt="装B就要装的深沉！" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2982661453.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">装B就要装的深沉！</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：66万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2687124947.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian6.jpg" alt="为什么世界上有这样的CP" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2687124947.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">为什么世界上有这样的CP</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：999999万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/3582377969.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian1.jpg" alt="黄昏总是勾起往事~" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/3582377969.html#stat=y_new.index.playlist.pic"
+                               onclick="setStatCookie&&setStatCookie();">黄昏总是勾起往事~</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：56万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/3586744667.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="../picture/tuijian9.jpg" alt="酒约黄昏后" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/3586744667.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">酒约黄昏后</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：89万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2063745031.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="https://p.qpic.cn/music_cover/QlZibnBVmII60BjTttickJO9MTQDoTRFvbPicur9d1jJHUA6oYcaE3zLw/300?n=1" alt="朦胧的美啊" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2063745031.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">海域上拯救自己</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：60万
+                    </div>
+                </div>
+            </li>
+            <li class="playlist__item slide__item"
+                onmouseover="this.className=this.className+'playlist__item--hover'"
+                onmouseout="this.className=this.className.replace(/playlist__item--hover/,'')"
+                data-disstid="20585556">
+                <div class="playlist__item_box">
+                    <div class="playlist__cover mod_cover">
+                        <a href="https://y.qq.com/n/yqq/playlist/2380264557.html#stat=y_new.index.playlist.pic"
+                           onclick="setStatCookie&&setStatCookie();" class="js_playlist">
+                            <img src="https://p.qpic.cn/music_cover/DT2VLx1Ln4FaibNjT9hiazW1sRBGDCib9kvZLQZsmpnSclMibHeichPcINg/300?n=1" alt="迷失森林" class="playlist__pic">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.playlist.play_btn"></i>
+                        </a>
+                    </div>
+                    <h4 class="playlist__title">
+                        <span class="playlist__title_txt">
+                            <a href="https://y.qq.com/n/yqq/playlist/2380264557.html#stat=y_new.index.playlist.name"
+                               onclick="setStatCookie&&setStatCookie();">迷失森林</a>
+                        </span>
+                    </h4>
+                    <div class="play__other">
+                        播放量：80万
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+</div>
+        <!--小圆点-->
+       <div class="mod_slide_switch js_switch">
+        <a href="javascript:;" tabindex="-1" class="js_jump slide_switch__item slide_switch__item--current" data-p="0">
+            <i class="slide_switch__bg"></i>
+            <i class="icon_txt">1</i>
+        </a>
+        <a href="javascript:;" tabindex="-1" class="js_jump slide_switch__item" data-p="0">
+            <i class="slide_switch__bg"></i>
+            <i class="icon_txt">2</i>
+        </a>
+    </div>
+</div>
+    <!--上下页-->
+    <div class="mod_slide_action">
+        <div class="slide_action slide_action--left">
+            <a href="javascript:;" class="slide_action_btn slide_action_btn--left js_jump"
+               data-p="prev" tabindex="-1" data-stat="y_new.index.playlist.pager">
+                <i class="icon_txt">上一页</i>
+                <i class="slide_action__arrow slide_action__arrow--left sprite"></i>
+            </a>
+        </div>
+        <div class="slide_action slide_action--right">
+            <a href="javascript:;" class="slide_action_btn slide_action_btn--right js_jump"
+               data-p="next" tabindex="-1" data-stat="y_new.index.playlist.pager">
+                <i class="icon_txt">下一页</i>
+                <i class="slide_action__arrow slide_action__arrow--right sprite"></i>
+            </a>
+        </div>
+    </div>
+
+</div>
+<!--新歌首发-->‘
+<div class="mod_index mod_index--song mod_slide_box js_box mod_bg" id="new_song_box">
+    <div class="section_inner">
+        <div class="index__hd">
+            <h2 class="index__tit">
+                <i class="icon_txt">新歌首发</i>
+            </h2>
+        </div>
+        <a href="javascript:;" class="mod_btn js_all_play">
+            <i class="mod_btn__icon_play js_all_play" data-stat="y_new.index.new_song.playall"></i>
+            全部播放
+        </a>
+        <!--切换-->
+     <!--小标题-->
+        <div class="mod_index_tab" data-stat="y_new.index.new_song">
+            <a href="javascript:;" class="index_tap__item index_tab__item--current js_tag" data-index="0" data-type="new_song" data-id="0">为你推荐</a>
+            <a href="javascript:;" class="index_tap__item js_tag" data-index="1" data-type="new_song" data-id="1">内地</a>
+            <a href="javascript:;" class="index_tap__item js_tag" data-index="2" data-type="new_song" data-id="2">港台</a>
+            <a href="javascript:;" class="index_tap__item js_tag" data-index="3" data-type="new_song" data-id="3">欧美</a>
+            <a href="javascript:;" class="index_tap__item js_tag" data-index="4" data-type="new_song" data-id="4">日本</a>
+            <a href="javascript:;" class="index_tap__item js_tag" data-index="5" data-type="new_song" data-id="5">韩国</a>
+        </div>
+        <!--图片列表-->
+        <div class="mod_songlist mod_slide">
+            <div class="slide__list js_list" style="left: 0%;">
+                <ul class="songlist__list">
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                        <a href="https://y.qq.com/n/yqq/album/0036Rr6b3vhkgR.html"
+                           title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                           class="album_name songlist__link mod_cover">
+                            <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M0000036Rr6b3vhkgR.jpg?max_age=2592000"
+                                 onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                            <i class="mod_cover__mask"></i>
+                            <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                        </a>
+                        <div class="songlist__content">
+                            <h3 class="songlist__song">
+                                <a href="https://y.qq.com/n/yqq/song/0017AcOA3cIaa2.html#stat=y_new.index.new_song.songname"
+                                   onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                   title="Go High">
+                                    Go High
+                                    <span class="songlist__song_txt"></span>
+                                </a>
+                            </h3>
+                            <p class="songlist__author">
+                                <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                   data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                   title="Kelly Clarkson" class="c_tx_thin singer_name">Kelly Clarkson</a>
+                            </p>
+                            <div class="songlist__time c_tx_thin">03:25</div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                            <a href="https://y.qq.com/n/yqq/album/004MFDGO0f2jVn.html"
+                               title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                               class="album_name songlist__link mod_cover">
+                                <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M000004MFDGO0f2jVn.jpg?max_age=2592000"
+                                     onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                                <i class="mod_cover__mask"></i>
+                                <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                            </a>
+                            <div class="songlist__content">
+                                <h3 class="songlist__song">
+                                    <a href="https://y.qq.com/n/yqq/song/002s96Ny4dZIU1.html#stat=y_new.index.new_song.songname"
+                                       onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                       title="骆驼">
+                                        骆驼
+                                        <span class="songlist__song_txt"></span>
+                                    </a>
+                                </h3>
+                                <p class="songlist__author">
+                                    <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                       data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                       title="Kelly Clarkson" class="c_tx_thin singer_name">Kelly Clarkson</a>
+                                </p>
+                                <div class="songlist__time c_tx_thin">04:36</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                            <a href="https://y.qq.com/n/yqq/album/002tzJEZ1GoUhd.html"
+                               title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                               class="album_name songlist__link mod_cover">
+                                <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M000002tzJEZ1GoUhd.jpg?max_age=2592000"
+                                     onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                                <i class="mod_cover__mask"></i>
+                                <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                            </a>
+                            <div class="songlist__content">
+                                <h3 class="songlist__song">
+                                    <a href="https://y.qq.com/n/yqq/song/002yw1bj2N60HQ.html#stat=y_new.index.new_song.songname"
+                                       onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                       title="LOL">
+                                        Legends Never Die
+                                        <span class="songlist__song_txt"></span>
+                                    </a>
+                                </h3>
+                                <p class="songlist__author">
+                                    <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                       data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                       title="Kelly Clarkson" class="c_tx_thin singer_name">Alan Walker</a>
+                                </p>
+                                <div class="songlist__time c_tx_thin">02:47</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                            <a href="https://y.qq.com/n/yqq/album/0036Rr6b3vhkgR.html"
+                               title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                               class="album_name songlist__link mod_cover">
+                                <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M0000036Rr6b3vhkgR.jpg?max_age=2592000"
+                                     onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                                <i class="mod_cover__mask"></i>
+                                <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                            </a>
+                            <div class="songlist__content">
+                                <h3 class="songlist__song">
+                                    <a href="https://y.qq.com/n/yqq/song/0017AcOA3cIaa2.html#stat=y_new.index.new_song.songname"
+                                       onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                       title="Go High">
+                                        Go High
+                                        <span class="songlist__song_txt"></span>
+                                    </a>
+                                </h3>
+                                <p class="songlist__author">
+                                    <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                       data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                       title="Kelly Clarkson" class="c_tx_thin singer_name">Kelly Clarkson</a>
+                                </p>
+                                <div class="songlist__time c_tx_thin">03:25</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                            <a href="https://y.qq.com/n/yqq/album/0036Rr6b3vhkgR.html"
+                               title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                               class="album_name songlist__link mod_cover">
+                                <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M0000036Rr6b3vhkgR.jpg?max_age=2592000"
+                                     onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                                <i class="mod_cover__mask"></i>
+                                <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                            </a>
+                            <div class="songlist__content">
+                                <h3 class="songlist__song">
+                                    <a href="https://y.qq.com/n/yqq/song/0017AcOA3cIaa2.html#stat=y_new.index.new_song.songname"
+                                       onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                       title="Go High">
+                                        Go High
+                                        <span class="songlist__song_txt"></span>
+                                    </a>
+                                </h3>
+                                <p class="songlist__author">
+                                    <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                       data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                       title="Kelly Clarkson" class="c_tx_thin singer_name">Kelly Clarkson</a>
+                                </p>
+                                <div class="songlist__time c_tx_thin">03:25</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                            <a href="https://y.qq.com/n/yqq/album/0036Rr6b3vhkgR.html"
+                               title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                               class="album_name songlist__link mod_cover">
+                                <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M0000036Rr6b3vhkgR.jpg?max_age=2592000"
+                                     onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                                <i class="mod_cover__mask"></i>
+                                <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                            </a>
+                            <div class="songlist__content">
+                                <h3 class="songlist__song">
+                                    <a href="https://y.qq.com/n/yqq/song/0017AcOA3cIaa2.html#stat=y_new.index.new_song.songname"
+                                       onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                       title="Go High">
+                                        Go High
+                                        <span class="songlist__song_txt"></span>
+                                    </a>
+                                </h3>
+                                <p class="songlist__author">
+                                    <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                       data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                       title="Kelly Clarkson" class="c_tx_thin singer_name">Kelly Clarkson</a>
+                                </p>
+                                <div class="songlist__time c_tx_thin">03:25</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                            <a href="https://y.qq.com/n/yqq/album/0036Rr6b3vhkgR.html"
+                               title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                               class="album_name songlist__link mod_cover">
+                                <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M0000036Rr6b3vhkgR.jpg?max_age=2592000"
+                                     onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                                <i class="mod_cover__mask"></i>
+                                <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                            </a>
+                            <div class="songlist__content">
+                                <h3 class="songlist__song">
+                                    <a href="https://y.qq.com/n/yqq/song/0017AcOA3cIaa2.html#stat=y_new.index.new_song.songname"
+                                       onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                       title="Go High">
+                                        Go High
+                                        <span class="songlist__song_txt"></span>
+                                    </a>
+                                </h3>
+                                <p class="songlist__author">
+                                    <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                       data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                       title="Kelly Clarkson" class="c_tx_thin singer_name">Kelly Clarkson</a>
+                                </p>
+                                <div class="songlist__time c_tx_thin">03:25</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                            <a href="https://y.qq.com/n/yqq/album/0036Rr6b3vhkgR.html"
+                               title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                               class="album_name songlist__link mod_cover">
+                                <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M0000036Rr6b3vhkgR.jpg?max_age=2592000"
+                                     onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                                <i class="mod_cover__mask"></i>
+                                <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                            </a>
+                            <div class="songlist__content">
+                                <h3 class="songlist__song">
+                                    <a href="https://y.qq.com/n/yqq/song/0017AcOA3cIaa2.html#stat=y_new.index.new_song.songname"
+                                       onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                       title="Go High">
+                                        Go High
+                                        <span class="songlist__song_txt"></span>
+                                    </a>
+                                </h3>
+                                <p class="songlist__author">
+                                    <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                       data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                       title="Kelly Clarkson" class="c_tx_thin singer_name">Kelly Clarkson</a>
+                                </p>
+                                <div class="songlist__time c_tx_thin">03:25</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="songlist__item" mid="204562503" ix="0">
+                        <div class="songlist_edit songlist_edit--check sprite"style="display: none;">
+                            <input type="checkbox" class="songlist__checkbox">
+                        </div>
+                        <div class="songlist__item_box" style="visibility: visible;">
+                            <a href="https://y.qq.com/n/yqq/album/0036Rr6b3vhkgR.html"
+                               title="Meaning of life" data-albummid="0036Rr6b3vhkgR" data-albumid="2303504"
+                               class="album_name songlist__link mod_cover">
+                                <img class="songlist__pic" src="//y.gtimg.cn/music/photo_new/T002R90x90M0000036Rr6b3vhkgR.jpg?max_age=2592000"
+                                     onerror="this.src='';this.onerror=null;" style="display: block;visibility: visible;">
+                                <i class="mod_cover__mask"></i>
+                                <i class="mod_cover__icon_play js_play" data-stat="y_new.index.new_song.play_btn"></i>
+                            </a>
+                            <div class="songlist__content">
+                                <h3 class="songlist__song">
+                                    <a href="https://y.qq.com/n/yqq/song/0017AcOA3cIaa2.html#stat=y_new.index.new_song.songname"
+                                       onclick="setStatCookie&&setStatCookie();" data-stat="y_new.index.new_song.songname" class="js-song"
+                                       title="Go High">
+                                        Go High
+                                        <span class="songlist__song_txt"></span>
+                                    </a>
+                                </h3>
+                                <p class="songlist__author">
+                                    <a href="https://y.qq.com/n/yqq/singer/0034b6ah1V4ZPk.html#stat=y_new.index.new_song.singername"
+                                       data-stat="y_new.index.new_song.singername" data-singermid="0034b6ah1V4ZPk" data-singerrid="4659"
+                                       title="Kelly Clarkson" class="c_tx_thin singer_name">Kelly Clarkson</a>
+                                </p>
+                                <div class="songlist__time c_tx_thin">03:25</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="mod_slide_switch js_switch" data-stat="y_new.index.new_song.pager"></div>
+    </div>
+    <div class="mod_slide_action"></div>
+</div>
+
+</body>
+</html>
